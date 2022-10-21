@@ -2,7 +2,7 @@ import type { NextPage } from 'next'
 import Header from '../components/Header'
 import Products from '../components/Products'
 import Footer from '../components/Footer'
-import ModalCart from '../components/ModalCart'
+import Modal from '../components/Modal'
 
 const Home: NextPage = () => {
   return (
@@ -11,7 +11,7 @@ const Home: NextPage = () => {
       <Header />
       <Products />
       <Footer />
-      <ModalCart />
+      <Modal />
     </div>
   )
 }
