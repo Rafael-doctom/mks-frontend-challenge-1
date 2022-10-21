@@ -1,5 +1,5 @@
-import { HeaderContainer, Header, Logo, Cart } from './styles'
-import {IoCart}  from 'react-icons/io5'
+import { HeaderContainer, Header, Logo } from './styles'
+import Cart from '../Cart'
 
 export default () => {
 
@@ -11,10 +11,7 @@ export default () => {
                     <span>Sistemas</span>
                 </Logo>
                 
-                <Cart>
-                    <IoCart/>
-                    0
-                </Cart>
+                <Cart />
             </Header>
         </HeaderContainer>
         
