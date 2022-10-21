@@ -65,8 +65,6 @@ export const BuyButton = styled.button`
     width:100%;
     background-color:#0F52BA;
     border-radius:0 0 8px 8px;
-    border:none;
-    cursor: pointer; 
     color:#fff;
     font-weight:600;
     font-size:14px;
