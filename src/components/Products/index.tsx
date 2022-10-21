@@ -1,36 +1,19 @@
+import ProductItem from '../ProductItem'
 import { ProductsContainer } from './styles'
 
 export default () => {
 
-    return(
+     return(
 
-        <ProductsContainer>
-           <div>
-                testevd
-                ewfsdsf
-                <span></span>
-           </div>
-           <div>
-                <span></span>
-           </div>
-           <div>
-                <span></span>
-           </div>
-           <div>
-                <span></span>
-           </div>
-           <div>
-                <span></span>
-           </div>
-           <div>
-                <span></span>
-           </div>
-           <div>
-                <span></span>
-           </div>
-           <div>
-                <span></span>
-           </div>
-        </ProductsContainer>
-    )
+          <ProductsContainer>
+               <ProductItem />
+               <ProductItem />
+               <ProductItem />
+               <ProductItem />
+               <ProductItem />
+               <ProductItem />
+               <ProductItem />
+               <ProductItem />
+          </ProductsContainer>
+     )
 }
