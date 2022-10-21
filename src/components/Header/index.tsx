@@ -1,10 +1,10 @@
-import { Container, Header, Logo, Cart } from './styles'
+import { HeaderContainer, Header, Logo, Cart } from './styles'
 import {IoCart}  from 'react-icons/io5'
 
 export default () => {
 
     return (
-        <Container>
+        <HeaderContainer>
             <Header>
                 <Logo>
                     <p>MKS</p>
@@ -16,7 +16,7 @@ export default () => {
                     0
                 </Cart>
             </Header>
-        </Container>
+        </HeaderContainer>
         
     )
 }

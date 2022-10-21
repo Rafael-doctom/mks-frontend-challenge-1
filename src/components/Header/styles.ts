@@ -1,30 +1,13 @@
 import styled from 'styled-components'
 
-export const Container = styled.div`
+export const HeaderContainer = styled.div`
 
     background-color: #0F52BA;
-    position:fixed;
-    left:0;
-    right:0;
+    position:sticky;
     top:0;
     height:100px;
     color: #fff;
-`
-
-export const Cart = styled.button`
-    border-radius:8px;
-    background-color:#fff;
-    border:none;
-    width:90px;
-    height:45px;
-    cursor: pointer;
-    color:#000;
-    font-weight:700;
-    font-size:18px;
-    display:flex;
-    justify-content: space-around;
-    align-items:center;
-    padding:0 15px;
+    z-index:200;
 `
 
 export const Header = styled.header`
@@ -55,4 +38,20 @@ export const Logo = styled.div`
         font-size:20px;     
         margin-top:8px;   
     }
+`
+
+export const Cart = styled.button`
+    border-radius:8px;
+    background-color:#fff;
+    border:none;
+    width:90px;
+    height:45px;
+    cursor: pointer;
+    color:#000;
+    font-weight:700;
+    font-size:18px;
+    display:flex;
+    justify-content: space-around;
+    align-items:center;
+    padding:0 15px;
 `
