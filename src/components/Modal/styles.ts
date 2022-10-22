@@ -1,6 +1,7 @@
 import styled from 'styled-components'
 
 export const ModalContainer = styled.aside<{isVisible:boolean}>`
+
     position:fixed;
     top:0;
     right: ${(props) => (props.isVisible ? '0' : '-100%')};
@@ -10,6 +11,27 @@ export const ModalContainer = styled.aside<{isVisible:boolean}>`
     height:100vh;
     width:460px;
     transition: all .6s ease;
+`
+
+export const ModalEmpty = styled.div`
+
+    height:100%;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+    
+    h2 {
+
+        font-weight:700;
+        font-size:27px;
+        color:#fff;
+    }
+
+    h3 {
+
+        color: #eee
+    }
 `
 
 export const ModalHeader = styled.div`
@@ -37,6 +59,10 @@ export const ModalCloseButton = styled.button`
     width:38px;
     border-radius:50%;
     font-weight:400;
+
+    position:absolute;
+    top:47px;
+    right:47px
 `
 
 export const ModalContent = styled.div`
@@ -46,7 +72,6 @@ export const ModalContent = styled.div`
     flex-direction:column;
     overflow-y:auto;
     padding:0 47px;
-
 `
 
 export const ModalFooter = styled.div`

@@ -4,6 +4,7 @@ import { useSelector, useDispatch } from 'react-redux'
 import { toggleModal } from '../../slices/modalSlice'
 import { 
     ModalContainer, 
+    ModalEmpty,
     ModalCloseButton, 
     ModalHeader, 
     ModalTitle, 
@@ -28,34 +29,45 @@ export default () => {
     return (
         
         <ModalContainer isVisible={isVisible}>
-            <ModalHeader>
-                <ModalTitle>
-                    Carrinho de compras
-                </ModalTitle>
-                <ModalCloseButton 
-                    onClick={() => dispatch(toggleModal())}>
-                    X
-                </ModalCloseButton>
-            </ModalHeader>
+            <ModalCloseButton 
+                onClick={() => dispatch(toggleModal())}
+            >
+                X
+            </ModalCloseButton>
+            { products.length === 0 &&
+                <ModalEmpty>
+                    <h2>Seu carrinho está vazio</h2>
+                    <h3>Adicione itens</h3>
+                </ModalEmpty>
+            }
+            { products.length > 0 &&   
+                <> 
 
-            <ModalContent>
-                {products.map(product => (
+                    <ModalHeader>
+                        <ModalTitle>
+                            Carrinho de compras
+                        </ModalTitle>
+                    </ModalHeader>
 
-                    <ModalItem key={product.id} product={product}/>   
-                ))}
-            </ModalContent>
+                    <ModalContent>
+                        {products.map(product => (
 
-            <ModalFooter>
-                <Total>
-                    <p>Total:</p>
-                    <span>R${totalPrice}</span>
-                </Total>
+                            <ModalItem key={product.id} product={product}/>   
+                        ))}
+                    </ModalContent>
 
-                <BuyButton>
-                    Finalizar Compra 
-                </BuyButton>
-            </ModalFooter>
+                    <ModalFooter>
+                        <Total>
+                            <p>Total:</p>
+                            <span>R${totalPrice}</span>
+                        </Total>
 
+                        <BuyButton>
+                            Finalizar Compra 
+                        </BuyButton>
+                    </ModalFooter>
+                </>
+            }
         </ModalContainer>
 
     )
