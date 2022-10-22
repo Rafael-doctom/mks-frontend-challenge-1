@@ -35,9 +35,6 @@ const modalSlice = createSlice({
                 item.id === product.id
             )
 
-            console.log(isAlrealdyInModal);
-            
-
             // if it is, increase its quantity
             if(isAlrealdyInModal) {
 
@@ -47,9 +44,6 @@ const modalSlice = createSlice({
                     ? {...item, quantity: item.quantity + 1} 
                     : item
                 )
-
-                console.log('EU JA TO AQUI');
-                
 
                 return
             }
