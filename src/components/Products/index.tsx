@@ -1,4 +1,4 @@
-import { Product } from '../../types/Product'
+import Product from '../../types/Product'
 import ProductItem from '../ProductItem'
 import { ProductsContainer } from './styles'
 

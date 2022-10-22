@@ -4,7 +4,7 @@ import Header from '../components/Header'
 import Products from '../components/Products'
 import Footer from '../components/Footer'
 import Modal from '../components/Modal'
-import { Product } from '../types/Product'
+import Product from '../types/Product'
 
 const Home = ({ products }: InferGetStaticPropsType<typeof getStaticProps>) => {
   return (
@@ -40,6 +40,6 @@ export const getStaticProps = async () => {
 
       products
     },
-    revalidate:7200
+    revalidate:1
   }
 }

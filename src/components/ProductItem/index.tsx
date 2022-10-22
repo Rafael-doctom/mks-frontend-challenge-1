@@ -1,5 +1,5 @@
 import { FiShoppingBag } from 'react-icons/fi'
-import { Product } from '../../types/Product'
+import Product from '../../types/Product'
 
 import { 
     ProductItemContainer, 
