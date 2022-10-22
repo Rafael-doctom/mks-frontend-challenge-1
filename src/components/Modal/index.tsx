@@ -12,11 +12,18 @@ import {
     Total,
     BuyButton
 } from './styles'
+import { useEffect } from 'react'
+// import ModalItem from '../../types/ModalItem'
 
 export default () => {
 
     const { isVisible, products } = useSelector((state:RootState) => state.modal)
     const dispatch = useDispatch()
+    const totalPrice = products.reduce((total, { price, quantity }) => {
+
+        return total + parseInt(price.toString()) * quantity
+    },0)
+
 
     return (
         
@@ -41,7 +48,7 @@ export default () => {
             <ModalFooter>
                 <Total>
                     <p>Total:</p>
-                    <span>R$799</span>
+                    <span>R${totalPrice}</span>
                 </Total>
 
                 <BuyButton>
