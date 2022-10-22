@@ -14,7 +14,7 @@ export default ({ products }:ProductsProps) => {
           <ProductsContainer>
 
                { products.map(product => (
-                    <ProductItem product={product} />
+                    <ProductItem key={product.id} product={product} />
                ))}
                
           </ProductsContainer>
