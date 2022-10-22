@@ -84,6 +84,18 @@ const modalSlice = createSlice({
 
             state.products = []
         }
-
     }
 })
+
+export const {
+
+    toggleModal, 
+    addProduct, 
+    removeProduct, 
+    increaseQuantity, 
+    decreaseQuantity, 
+    clearModal
+
+} = modalSlice.actions
+
+export default modalSlice.reducer
