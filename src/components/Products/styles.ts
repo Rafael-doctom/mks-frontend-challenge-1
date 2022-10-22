@@ -2,8 +2,8 @@ import styled from 'styled-components';
 
 export const ProductsContainer = styled.main`
 
-    
     height:100vh;
+    /* background-color:red; */
     display:grid;
     align-content: center;
     justify-content: center;
@@ -14,9 +14,7 @@ export const ProductsContainer = styled.main`
     /* desktop */
     @media (max-width:1020px) {
 
-        grid-template-columns: auto auto auto;
-        height:100%;
-        
+        grid-template-columns: auto auto auto;        
     }
 
     /* tablet */
