@@ -15,7 +15,7 @@ import {
 
 export default () => {
 
-    const isVisible = useSelector((state:RootState) => state.modal.isVisible)
+    const { isVisible, products } = useSelector((state:RootState) => state.modal)
     const dispatch = useDispatch()
 
     return (
@@ -32,9 +32,10 @@ export default () => {
             </ModalHeader>
 
             <ModalContent>
-                <ModalItem />
-                <ModalItem />  
-                  
+                {products.map(product => (
+
+                    <ModalItem key={product.id} product={product}/>   
+                ))}
             </ModalContent>
 
             <ModalFooter>
