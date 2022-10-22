@@ -1,4 +1,7 @@
 import ModalItem from '../ModalItem'
+import type { RootState } from '../../store'
+import { useSelector, useDispatch } from 'react-redux'
+import { toggleModal } from '../../slices/modalSlice'
 import { 
     ModalContainer, 
     ModalCloseButton, 
@@ -12,14 +15,18 @@ import {
 
 export default () => {
 
+    const isVisible = useSelector((state:RootState) => state.modal.isVisible)
+    const dispatch = useDispatch()
+
     return (
         
-        <ModalContainer>
+        <ModalContainer isVisible={isVisible}>
             <ModalHeader>
                 <ModalTitle>
                     Carrinho de compras
                 </ModalTitle>
-                <ModalCloseButton>
+                <ModalCloseButton 
+                    onClick={() => dispatch(toggleModal())}>
                     X
                 </ModalCloseButton>
             </ModalHeader>

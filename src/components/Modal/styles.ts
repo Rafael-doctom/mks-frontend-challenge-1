@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 
-export const ModalContainer = styled.aside`
+export const ModalContainer = styled.aside<{isVisible:boolean}>`
     position:fixed;
     top:0;
     right:0;
@@ -9,7 +9,8 @@ export const ModalContainer = styled.aside`
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
     height:100vh;
     width:460px;
-    display:none;
+    right: ${(props) => (props.isVisible ? '0' : '-100%')};
+    transition: all ease-in-out .6s;
 `
 
 export const ModalHeader = styled.div`
