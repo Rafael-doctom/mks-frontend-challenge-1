@@ -11,21 +11,29 @@ export const ProductItemContainer = styled.div`
 export const ProductContent = styled.div`
 
     display:flex;
-    flex-direction:column;
-   
+    flex-direction:column; 
 `
 
-export const ProductImage = styled.div`
+export const ProductImage = styled.div<{url:string}>`
 
-    height:140px;
-    /* background-color:red; */
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    height:125px;
+    width:130px;
+    margin:auto;
+    background-image:url(${props => props.url});
+    background-repeat:no-repeat;
+    background-position:center;
+    background-size:100%
 `
 
 export const ProductHeader = styled.div`
 
     display:flex;
-    padding:14px;
     align-items:center;
+    padding:14px;
+
 `
 
 export const ProductTitle = styled.p`
@@ -34,7 +42,6 @@ export const ProductTitle = styled.p`
     font-weight:400;
     font-size:16px;
     color:#373737;
-
 `
 
 export const ProductPriceTag = styled.span`

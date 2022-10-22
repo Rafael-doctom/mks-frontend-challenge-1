@@ -1,19 +1,23 @@
+import { Product } from '../../types/Product'
 import ProductItem from '../ProductItem'
 import { ProductsContainer } from './styles'
 
-export default () => {
+type ProductsProps = {
+     
+     products:Product[]
+}
+
+export default ({ products }:ProductsProps) => {
 
      return(
 
           <ProductsContainer>
-               <ProductItem />
-               <ProductItem />
-               <ProductItem />
-               <ProductItem />
-               <ProductItem />
-               <ProductItem />
-               <ProductItem />
-               <ProductItem />
+
+               { products.map(product => (
+                    <ProductItem product={product} />
+               ))}
+               
           </ProductsContainer>
      )
 }
+

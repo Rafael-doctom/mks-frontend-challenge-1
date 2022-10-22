@@ -1,4 +1,6 @@
 import { FiShoppingBag } from 'react-icons/fi'
+import { Product } from '../../types/Product'
+
 import { 
     ProductItemContainer, 
     ProductContent, 
@@ -10,27 +12,29 @@ import {
     BuyButton
 } from './styles'
 
-export default () => {
+type ProductItemProps = {
+
+    product:Product
+}
+
+export default ({ product }:ProductItemProps) => {
 
     return(
 
         <ProductItemContainer>
             <ProductContent>
-                <ProductImage>
-                    IMAGEM
-                </ProductImage>
+                <ProductImage url={product.photo} />
                     
                 <ProductHeader>
                     <ProductTitle>
-                        Apple Homepod
+                        {product.name}
                     </ProductTitle>
                     <ProductPriceTag>
-                        R$ 399
+                        R${parseInt(product.price.toString())}
                     </ProductPriceTag>
                 </ProductHeader>
                 <ProductDescription>
-                    Redesigned from scratch and completely revised.
-                    
+                    {product.description}
                 </ProductDescription>
                 <BuyButton>
                     <FiShoppingBag />
