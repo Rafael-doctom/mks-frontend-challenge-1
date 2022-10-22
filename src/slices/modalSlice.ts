@@ -30,10 +30,13 @@ const modalSlice = createSlice({
             const product = action.payload
 
             // checks if the product's already in the modal
-            const isAlrealdyInModal = state.products.some((item) => {
-
+            const isAlrealdyInModal = state.products.some((item) => 
+              
                 item.id === product.id
-            })
+            )
+
+            console.log(isAlrealdyInModal);
+            
 
             // if it is, increase its quantity
             if(isAlrealdyInModal) {
@@ -44,6 +47,9 @@ const modalSlice = createSlice({
                     ? {...item, quantity: item.quantity + 1} 
                     : item
                 )
+
+                console.log('EU JA TO AQUI');
+                
 
                 return
             }

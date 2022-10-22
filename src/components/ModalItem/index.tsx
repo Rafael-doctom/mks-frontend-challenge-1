@@ -1,3 +1,4 @@
+import ModalItem from '../../types/ModalItem'
 import { 
     ModalItemContainer,
     ItemImage,
@@ -9,7 +10,12 @@ import {
     ItemPrice
 } from './styles'
 
-export default () => {
+type ModalItemProps = {
+
+    product: ModalItem
+}
+
+export default ({product}:ModalItemProps) => {
 
     return (
 
@@ -18,7 +24,7 @@ export default () => {
             </ItemImage>
 
             <ItemTitle>
-                Apple Watch Series 4 GPS
+                {product.name}
             </ItemTitle>
 
             <ItemQuantityContainer>
@@ -29,7 +35,7 @@ export default () => {
                         -
                     </QuantityButton>
                     <Quantity>
-                        1
+                        {product.quantity}
                     </Quantity>
                     <QuantityButton>
                         +
@@ -38,7 +44,7 @@ export default () => {
             </ItemQuantityContainer>
 
             <ItemPrice>
-                R$399
+                {product.price}
             </ItemPrice>
 
         </ModalItemContainer>

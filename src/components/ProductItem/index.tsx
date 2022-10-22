@@ -1,5 +1,7 @@
 import { FiShoppingBag } from 'react-icons/fi'
 import Product from '../../types/Product'
+import { useDispatch } from 'react-redux'
+import { addProduct } from '../../slices/modalSlice'
 
 import { 
     ProductItemContainer, 
@@ -18,6 +20,8 @@ type ProductItemProps = {
 }
 
 export default ({ product }:ProductItemProps) => {
+
+    const dispatch = useDispatch()
 
     return(
 
@@ -38,7 +42,9 @@ export default ({ product }:ProductItemProps) => {
                     {product.description}
                 </ProductDescription>
                 
-                <BuyButton>
+                <BuyButton
+                    onClick={() => dispatch(addProduct(product))}
+                >
                     <FiShoppingBag />
                     COMPRAR
                 </BuyButton>
