@@ -2,8 +2,8 @@ import styled from 'styled-components';
 
 export const ProductItemContainer = styled.div`
 
-    height:280px;
-    width:220px;
+    height:285px;
+    width:218px;
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
     border-radius:8px;
     position:relative;
@@ -19,8 +19,8 @@ export const ProductImage = styled.div<{url:string}>`
     display:flex;
     justify-content:center;
     align-items:center;
-    height:125px;
-    width:130px;
+    height:126px;
+    width:120px;
     margin:auto;
     background-image:url(${props => props.url});
     background-repeat:no-repeat;
@@ -32,7 +32,7 @@ export const ProductHeader = styled.div`
 
     display:flex;
     align-items:center;
-    padding:14px;
+    padding:12px 14px;
 
 `
 

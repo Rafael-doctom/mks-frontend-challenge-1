@@ -33,9 +33,11 @@ export default ({ product }:ProductItemProps) => {
                         R${parseInt(product.price.toString())}
                     </ProductPriceTag>
                 </ProductHeader>
+
                 <ProductDescription>
                     {product.description}
                 </ProductDescription>
+                
                 <BuyButton>
                     <FiShoppingBag />
                     COMPRAR
