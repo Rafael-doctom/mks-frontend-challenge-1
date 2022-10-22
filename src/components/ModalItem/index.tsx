@@ -1,6 +1,10 @@
+import { useDispatch } from 'react-redux'
+import { decreaseQuantity, increaseQuantity, removeProduct } from '../../slices/modalSlice'
 import ModalItem from '../../types/ModalItem'
+
 import { 
     ModalItemContainer,
+    RemoveItemButton,
     ItemImage,
     ItemTitle,
     ItemQuantityContainer,
@@ -16,10 +20,18 @@ type ModalItemProps = {
 }
 
 export default ({product}:ModalItemProps) => {
+    
+    const dispatch = useDispatch()
 
     return (
 
         <ModalItemContainer>
+            <RemoveItemButton
+                onClick={() => dispatch(removeProduct(product.id))}
+            >
+                x
+            </RemoveItemButton>
+
             <ItemImage>
             </ItemImage>
 
@@ -31,20 +43,24 @@ export default ({product}:ModalItemProps) => {
                 <p>Qtd:</p>
 
                 <ItemQuantity>
-                    <QuantityButton>
+                    <QuantityButton
+                        onClick={() => dispatch(decreaseQuantity(product.id))}
+                    >
                         -
                     </QuantityButton>
                     <Quantity>
                         {product.quantity}
                     </Quantity>
-                    <QuantityButton>
+                    <QuantityButton
+                        onClick={() => dispatch(increaseQuantity(product.id))}
+                    >
                         +
                     </QuantityButton>
                 </ItemQuantity>
             </ItemQuantityContainer>
 
             <ItemPrice>
-                {product.price}
+                R${parseInt(product.price.toString())}
             </ItemPrice>
 
         </ModalItemContainer>

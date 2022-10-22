@@ -9,7 +9,21 @@ export const ModalItemContainer = styled.div`
     display:flex;
     align-items:center;
     padding:19px 23px;
-    margin-bottom:30px;
+    margin: 10px 0 30px 0;
+    position:relative;
+`
+
+export const RemoveItemButton = styled.button`
+
+    background-color:#000;
+    color:#fff;
+    height:20px;
+    width:20px;
+    border-radius:50%;
+    font-weight:400;
+    position:absolute;
+    right:-2%;
+    bottom:85%;
 `
 
 export const ItemImage = styled.div`
