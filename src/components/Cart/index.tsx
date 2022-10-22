@@ -1,12 +1,19 @@
 import { IoCart } from 'react-icons/io5'
 import { Cart } from './styles'
-import { useDispatch } from 'react-redux'
+import { useDispatch, useSelector } from 'react-redux'
 import { toggleModal } from '../../slices/modalSlice'
+import { RootState } from '../../store'
 
 
 export default () => {
 
-    const dispatch = useDispatch()    
+    const { products } = useSelector((state:RootState) => state.modal)
+    const dispatch = useDispatch()
+    const totalItems = products.reduce((total, { quantity }) => {
+
+        return total + quantity
+    },0)
+   
 
     return (
 
@@ -14,7 +21,7 @@ export default () => {
             onClick={() => dispatch(toggleModal())}
         >
             <IoCart />
-            0
+            {totalItems}
         </Cart>
     )
 }
