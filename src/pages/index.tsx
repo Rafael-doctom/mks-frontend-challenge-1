@@ -26,11 +26,20 @@ export const getStaticProps = async () => {
   const data = await res.json();
   const products:Product[] = data.products;
 
+  if(!products){
+
+    return {
+
+      notFound:true
+    }
+  }
+
   return {
 
     props: {
 
       products
-    }
+    },
+    revalidate:7200
   }
 }
