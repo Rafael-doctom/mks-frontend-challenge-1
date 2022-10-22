@@ -32,9 +32,8 @@ export default ({product}:ModalItemProps) => {
                 x
             </RemoveItemButton>
 
-            <ItemImage>
-            </ItemImage>
-
+            <ItemImage url={product.photo} />
+            
             <ItemTitle>
                 {product.name}
             </ItemTitle>

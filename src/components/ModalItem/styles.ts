@@ -26,12 +26,18 @@ export const RemoveItemButton = styled.button`
     bottom:85%;
 `
 
-export const ItemImage = styled.div`
+export const ItemImage = styled.div<{url:string}>`
 
-    width:46px;
-    height:47px;
-    background-color:red;
-
+    width:40px;
+    height:57px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    margin:auto;
+    background-image:url(${props => props.url});
+    background-repeat:no-repeat;
+    background-position:center;
+    background-size:100%
 `
 
 export const ItemTitle = styled.p`
