@@ -37,7 +37,6 @@ export const ModalCloseButton = styled.button`
     width:38px;
     border-radius:50%;
     font-weight:400;
-    border:none;
 `
 
 export const ModalContent = styled.div`
