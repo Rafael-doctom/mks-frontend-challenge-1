@@ -1,5 +1,8 @@
-import { Header, Logo } from './styles'
+// components
 import Cart from '../Cart'
+
+// styles
+import { Header, Logo } from './styles'
 
 export default () => {
 

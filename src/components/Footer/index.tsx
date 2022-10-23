@@ -1,3 +1,4 @@
+// styles
 import { Footer } from './styles'
 
 export default () => {

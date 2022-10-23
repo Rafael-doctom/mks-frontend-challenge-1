@@ -1,7 +1,6 @@
-import ModalItem from '../ModalItem'
-import type { RootState } from '../../store'
 import { useSelector, useDispatch } from 'react-redux'
-import { toggleModal } from '../../slices/modalSlice'
+
+// styles
 import { 
     ModalContainer, 
     ModalEmpty,
@@ -14,6 +13,10 @@ import {
     BuyButton
 } from './styles'
 
+// utilities
+import ModalItem from '../ModalItem'
+import type { RootState } from '../../store'
+import { toggleModal } from '../../slices/modalSlice'
 
 export default () => {
 

@@ -1,6 +1,11 @@
-import Product from '../../types/Product'
+// components
 import ProductItem from '../ProductItem'
+
+// styles
 import { ProductsContainer } from './styles'
+
+// utilities
+import Product from '../../types/Product'
 
 type ProductsProps = {
      

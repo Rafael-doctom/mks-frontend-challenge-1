@@ -1,8 +1,7 @@
 import { FiShoppingBag } from 'react-icons/fi'
-import Product from '../../types/Product'
 import { useDispatch } from 'react-redux'
-import { addProduct } from '../../slices/modalSlice'
 
+// styles
 import { 
     ProductItemContainer, 
     ProductContent, 
@@ -13,6 +12,10 @@ import {
     ProductDescription,
     BuyButton
 } from './styles'
+
+// utilities
+import { addProduct } from '../../slices/modalSlice'
+import Product from '../../types/Product'
 
 type ProductItemProps = {
 

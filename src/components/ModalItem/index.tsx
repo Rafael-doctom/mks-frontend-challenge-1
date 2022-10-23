@@ -1,7 +1,6 @@
 import { useDispatch } from 'react-redux'
-import { decreaseQuantity, increaseQuantity, removeProduct } from '../../slices/modalSlice'
-import ModalItem from '../../types/ModalItem'
 
+// styles
 import { 
     ModalItemContainer,
     RemoveItemButton,
@@ -13,6 +12,10 @@ import {
     Quantity,
     ItemPrice
 } from './styles'
+
+// utilities
+import { decreaseQuantity, increaseQuantity, removeProduct } from '../../slices/modalSlice'
+import ModalItem from '../../types/ModalItem'
 
 type ModalItemProps = {
 
