@@ -13,8 +13,7 @@ import {
     Total,
     BuyButton
 } from './styles'
-import { useEffect } from 'react'
-// import ModalItem from '../../types/ModalItem'
+
 
 export default () => {
 

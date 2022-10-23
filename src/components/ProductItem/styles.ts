@@ -7,6 +7,12 @@ export const ProductItemContainer = styled.div`
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
     border-radius:8px;
     position:relative;
+
+    @media (max-width:570px){
+
+        width:250px;
+        height:328px;
+    }
 `
 export const ProductContent = styled.div`
 
@@ -25,7 +31,14 @@ export const ProductImage = styled.div<{url:string}>`
     background-image:url(${props => props.url});
     background-repeat:no-repeat;
     background-position:center;
-    background-size:100%
+    background-size:100%;
+
+    /* mobile */
+    @media (max-width:570px) {
+
+        height:158.82px;
+        width: 127.8px;
+    }
 `
 
 export const ProductHeader = styled.div`
@@ -33,7 +46,6 @@ export const ProductHeader = styled.div`
     display:flex;
     align-items:center;
     padding:12px 14px;
-
 `
 
 export const ProductTitle = styled.p`
@@ -65,7 +77,9 @@ export const ProductDescription = styled.p`
     font-size:10px;
     color:#2C2C2C;
 `
+
 export const BuyButton = styled.button`
+
     position:absolute;
     bottom:0;
     height:32px;
@@ -78,5 +92,11 @@ export const BuyButton = styled.button`
     display:flex;
     justify-content: space-around;
     align-items:center;
-    padding:0 50px
+    padding:0 50px;
+
+    /* mobile */
+    @media (max-width:570px) {
+
+        height:36px;
+    }
 `

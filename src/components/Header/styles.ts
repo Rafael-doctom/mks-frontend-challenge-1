@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 
-export const HeaderContainer = styled.div`
+export const Header = styled.header`
 
     background-color: #0F52BA;
     position:sticky;
@@ -8,15 +8,18 @@ export const HeaderContainer = styled.div`
     height:100px;
     color: #fff;
     z-index:200;
-`
-
-export const Header = styled.header`
-
     display:flex;
     justify-content:space-between;
     align-items:center;
     padding: 28px 65px;
     height:100%;
+
+    /* mobile */
+    @media (max-width:570px) {
+
+        height:48px;
+        padding: 2px 20px;
+    }
 `
 
 export const Logo = styled.div`
@@ -30,6 +33,12 @@ export const Logo = styled.div`
         font-size:40px;
         text-align:center;
         margin-right:8px;
+
+        /* mobile */
+        @media (max-width:570px) {
+
+            font-size:32px;
+        }
     }
 
     span {
@@ -37,6 +46,12 @@ export const Logo = styled.div`
         font-weight:300;
         font-size:20px;     
         margin-top:8px;   
+
+        /* mobile */
+        @media (max-width:570px) {
+
+            font-size:16px;
+        }
     }
 `
 

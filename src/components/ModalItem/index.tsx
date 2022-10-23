@@ -38,29 +38,31 @@ export default ({product}:ModalItemProps) => {
                 {product.name}
             </ItemTitle>
 
-            <ItemQuantityContainer>
-                <p>Qtd:</p>
+           <div style={{display:'flex', alignItems:'center', padding:'0 10px'}}>
+                <ItemQuantityContainer>
+                    <p>Qtd:</p>
 
-                <ItemQuantity>
-                    <QuantityButton
-                        onClick={() => dispatch(decreaseQuantity(product.id))}
-                    >
-                        -
-                    </QuantityButton>
-                    <Quantity>
-                        {product.quantity}
-                    </Quantity>
-                    <QuantityButton
-                        onClick={() => dispatch(increaseQuantity(product.id))}
-                    >
-                        +
-                    </QuantityButton>
-                </ItemQuantity>
-            </ItemQuantityContainer>
+                    <ItemQuantity>
+                        <QuantityButton
+                            onClick={() => dispatch(decreaseQuantity(product.id))}
+                        >
+                            -
+                        </QuantityButton>
+                        <Quantity>
+                            {product.quantity}
+                        </Quantity>
+                        <QuantityButton
+                            onClick={() => dispatch(increaseQuantity(product.id))}
+                        >
+                            +
+                        </QuantityButton>
+                    </ItemQuantity>
+                </ItemQuantityContainer>
 
-            <ItemPrice>
-                R${parseInt(product.price.toString())}
-            </ItemPrice>
+                <ItemPrice>
+                    R${parseInt(product.price.toString())}
+                </ItemPrice>
+           </div>
 
         </ModalItemContainer>
     )

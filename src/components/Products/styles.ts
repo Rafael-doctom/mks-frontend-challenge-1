@@ -2,8 +2,7 @@ import styled from 'styled-components';
 
 export const ProductsContainer = styled.main`
 
-    height:100vh;
-    /* background-color:red; */
+    height:100vh; 
     display:grid;
     align-content: center;
     justify-content: center;
@@ -14,19 +13,19 @@ export const ProductsContainer = styled.main`
     /* desktop */
     @media (max-width:1020px) {
 
-        grid-template-columns: auto auto auto;        
+        grid-template-columns: auto auto auto;
     }
 
     /* tablet */
     @media (max-width:800px) {
 
         grid-template-columns: auto auto;
-
     }
 
     /* mobile */
     @media (max-width:570px) {
 
         grid-template-columns: auto;
+        height:100%;
     }
 `

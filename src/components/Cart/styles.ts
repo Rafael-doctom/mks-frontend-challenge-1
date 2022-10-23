@@ -12,4 +12,14 @@ export const Cart = styled.button`
     justify-content: space-around;
     align-items:center;
     padding:0 15px;
+
+    /* mobile */
+    @media (max-width:570px) {
+
+        font-size:32px;
+        width:52px;
+        height:26px;
+        font-size:12px;
+        padding:5px 7px;
+    }
 `
