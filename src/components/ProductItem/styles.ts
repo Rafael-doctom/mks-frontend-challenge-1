@@ -1,4 +1,5 @@
-import styled from 'styled-components';
+import styled from 'styled-components'
+import Colors from '../../theme/colors'
 
 export const ProductItemContainer = styled.div`
 
@@ -58,8 +59,8 @@ export const ProductTitle = styled.p`
 
 export const ProductPriceTag = styled.span`
 
-    background-color:#373737;
-    color:#fff;
+    background-color:${Colors.background.darkGray};
+    color:${Colors.text.white};
     border-radius:5px;
     display:flex;
     justify-content:center;
@@ -75,7 +76,7 @@ export const ProductDescription = styled.p`
     padding:0 14px;
     font-weight:300;
     font-size:10px;
-    color:#2C2C2C;
+    color:${Colors.text.nightRider};
 `
 
 export const BuyButton = styled.button`
@@ -84,9 +85,9 @@ export const BuyButton = styled.button`
     bottom:0;
     height:32px;
     width:100%;
-    background-color:#0F52BA;
+    background-color:${Colors.background.darkBlue};
     border-radius:0 0 8px 8px;
-    color:#fff;
+    color:${Colors.text.white};
     font-weight:600;
     font-size:14px;
     display:flex;

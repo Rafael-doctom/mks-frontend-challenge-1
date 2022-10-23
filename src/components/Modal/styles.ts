@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import Colors from '../../theme/colors'
 
 export const ModalContainer = styled.aside<{isVisible:boolean}>`
 
@@ -9,7 +10,7 @@ export const ModalContainer = styled.aside<{isVisible:boolean}>`
     background-color:#0F52BA;
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
     height:100vh;
-    width:40%;
+    width:35%;
     transition: all .6s ease;
 
     /* tablet */
@@ -38,7 +39,7 @@ export const ModalEmpty = styled.div`
 
         font-weight:700;
         font-size:27px;
-        color:#fff;
+        color:${Colors.text.white};
 
         /* tablet */
         @media (max-width:800px) {
@@ -49,7 +50,7 @@ export const ModalEmpty = styled.div`
 
     h3 {
 
-        color: #eee
+        color: ${Colors.text.gray}
     }
 `
 
@@ -67,14 +68,14 @@ export const ModalTitle = styled.p`
     max-width:180px;
     font-weight:700;
     font-size:27px;
-    color:#fff;
+    color:${Colors.text.white};
 
 `
 
 export const ModalCloseButton = styled.button`
 
-    background-color:#000;
-    color:#fff;
+    background-color:${Colors.background.black};
+    color:${Colors.text.white};
     height:38px;
     width:38px;
     border-radius:50%;
@@ -96,7 +97,7 @@ export const ModalCloseButton = styled.button`
 
         width:45px;
         height:45px;
-        color:#0F52BA;
+        color:${Colors.text.darkBlue};
         font-size:34px;
     }
 `
@@ -129,7 +130,7 @@ export const Total = styled.div`
     display: flex;
     justify-content:space-between;
     align-items:center;
-    color:#fff;
+    color:${Colors.text.white};
     font-weight:700;
     font-size:18px;
     margin-bottom:40px;
@@ -150,7 +151,7 @@ export const BuyButton = styled.button`
     font-size:28px;
     display:inline-block;
     height:100px;
-    color: #fff;
+    color:${Colors.text.white};
     width:100%;
 
     /* mobile */

@@ -1,11 +1,12 @@
-import styled from 'styled-components';
+import styled from 'styled-components'
+import Colors from '../../theme/colors'
 
 export const ModalItemContainer = styled.div`
 
     width:auto;
     height:95px;
     border-radius:8px;
-    background-color:#fff;
+    background-color:${Colors.background.white};
     display:flex;
     align-items:center;
     justify-content:center;
@@ -13,8 +14,8 @@ export const ModalItemContainer = styled.div`
     margin: 10px 0 30px 0;
     position:relative;
 
-    /* tablet */
-    @media (max-width:1050px) {
+    /* desktop */
+    @media (max-width:1250px) {
 
         flex-direction:column;
         height:200px;
@@ -24,19 +25,20 @@ export const ModalItemContainer = styled.div`
 export const RemoveItemButton = styled.button`
 
     background-color:#000;
-    color:#fff;
+    text-align:center;
+    color:${Colors.text.white};
     height:20px;
     width:20px;
     border-radius:50%;
     font-weight:400;
     position:absolute;
-    right:-2%;
+    right:-1.5%;
     bottom:85%;
 
-    /* tablet */
-    @media (max-width:1050px) {
+    /* desktop */
+    @media (max-width:1250px) {
 
-        background-color:#fff;
+        background-color:${Colors.background.white};
         color:#000;
         right:5%;
         bottom:90%;
@@ -56,8 +58,8 @@ export const ItemImage = styled.div<{url:string}>`
     background-position:center;
     background-size:100%;
 
-    /* tablet */
-    @media (max-width:1050px) {
+    /* desktop */
+    @media (max-width:1250px) {
 
         height:95px;
         width:80px;
@@ -71,8 +73,8 @@ export const ItemTitle = styled.p`
     max-width:110px;
     margin: 0 20px;
 
-    /* tablet */
-    @media (max-width:1050px) {
+    /* desktop */
+    @media (max-width:1250px) {
 
         margin-bottom:10px;
     }
@@ -91,8 +93,8 @@ export const ItemQuantityContainer = styled.div`
         font-size:10px;
         text-align:left;
 
-        /* tablet */
-        @media (max-width:1050px) {
+        /* desktop */
+        @media (max-width:1250px) {
 
             display:none;
         }
@@ -101,20 +103,21 @@ export const ItemQuantityContainer = styled.div`
 
 export const ItemQuantity = styled.div`
 
-    width:60px;
+    width:65px;
     height: 22px;
     border-radius:5px;
-    border: 1px solid #BFBFBF;
+    border: 1px solid ${Colors.border};
     margin-top:4px;
     margin-right:40px;
     display:flex;
     align-items:center;
     justify-content: space-around;
 
-    /* tablet */
-    @media (max-width:1050px) {
+    /* desktop */
+    @media (max-width:1250px) {
 
-        margin-right:10px;
+        margin:0 10px 0 0;
+        height:26px;    
     }
 
     /* mobile */
@@ -128,10 +131,16 @@ export const ItemQuantity = styled.div`
 `
 export const Quantity = styled.span`
     font-weight:400;
-    font-size:8px;
-    border-left: 1px solid #BFBFBF;
-    border-right: 1px solid #BFBFBF;
+    font-size:10px;
+    border-left: 1px solid ${Colors.border};
+    border-right: 1px solid ${Colors.border};
     padding:0 8px;
+
+    /* desktop */
+    @media (max-width:1250px) {
+
+        font-size:14px;
+    }
       
     /* mobile */
     @media (max-width:570px) {
@@ -161,11 +170,11 @@ export const ItemPrice = styled.span`
     display:flex;
     align-items:center;
 
-    /* tablet */
-    @media (max-width:1050px) {
+    /* desktop */
+    @media (max-width:1250px) {
 
-        background-color:#373737;
-        color:#fff;
+        background-color:${Colors.background.darkGray};
+        color:${Colors.text.white};
         border-radius:5px;
         display:flex;
         justify-content:center;

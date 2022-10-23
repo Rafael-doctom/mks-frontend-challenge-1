@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled from 'styled-components'
 
 export const ProductsContainer = styled.main`
 
@@ -14,6 +14,7 @@ export const ProductsContainer = styled.main`
     @media (max-width:1020px) {
 
         grid-template-columns: auto auto auto;
+        height:100%;
     }
 
     /* tablet */
@@ -26,6 +27,5 @@ export const ProductsContainer = styled.main`
     @media (max-width:570px) {
 
         grid-template-columns: auto;
-        height:100%;
     }
 `

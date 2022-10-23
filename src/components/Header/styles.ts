@@ -1,12 +1,13 @@
 import styled from 'styled-components'
+import Colors from '../../theme/colors'
 
 export const Header = styled.header`
 
-    background-color: #0F52BA;
+    background-color:${Colors.background.darkBlue};
     position:sticky;
     top:0;
     height:100px;
-    color: #fff;
+    color:${Colors.text.white};
     z-index:200;
     display:flex;
     justify-content:space-between;

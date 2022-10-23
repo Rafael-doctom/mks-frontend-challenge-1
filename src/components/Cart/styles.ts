@@ -1,11 +1,12 @@
-import styled from 'styled-components';
+import styled from 'styled-components'
+import Colors from '../../theme/colors'
 
 export const Cart = styled.button`
     border-radius:8px;
-    background-color:#fff;
+    background-color:${Colors.background.white};
     width:90px;
     height:45px;
-    color:#000;
+    color:${Colors.text.black};
     font-weight:700;
     font-size:18px;
     display:flex;

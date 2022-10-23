@@ -1,4 +1,5 @@
-import styled from 'styled-components';
+import styled from 'styled-components'
+import Colors from '../../theme/colors'
 
 export const Footer = styled.footer`
 
@@ -6,8 +7,8 @@ export const Footer = styled.footer`
     position:sticky;
     bottom:0;
     width:100%;
-    background-color:#EEEEEE;
-    color:#000;
+    background-color:${Colors.background.gray};
+    color:${Colors.background.black};
     font-weight:400;
     font-size:12px;
     display:flex;
