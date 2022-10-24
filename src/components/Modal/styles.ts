@@ -69,7 +69,6 @@ export const ModalTitle = styled.p`
     font-weight:700;
     font-size:27px;
     color:${Colors.text.white};
-
 `
 
 export const ModalCloseButton = styled.button`

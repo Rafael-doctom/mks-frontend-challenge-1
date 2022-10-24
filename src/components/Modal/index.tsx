@@ -47,7 +47,9 @@ export default () => {
 
                     <ModalHeader>
                         <ModalTitle>
-                            Carrinho de compras
+                            Carrinho
+                            <br/> 
+                            de compras
                         </ModalTitle>
                     </ModalHeader>
 
