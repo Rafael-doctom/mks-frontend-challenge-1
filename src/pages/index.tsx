@@ -1,10 +1,14 @@
 import { InferGetStaticPropsType } from 'next'
+import Head from 'next/head'
+
+// components
 import Header from '../components/Header'
 import Products from '../components/Products'
 import Footer from '../components/Footer'
 import Modal from '../components/Modal'
-import Product from '../types/Product'
-import Head from 'next/head'
+
+// utilities
+import api from '../server/api'
 
 const Home = ({ products }: InferGetStaticPropsType<typeof getStaticProps>) => {
   return (
@@ -28,9 +32,7 @@ export default Home
 
 export const getStaticProps = async () => {
 
-  const res = await fetch('https://mks-frontend-challenge-api.herokuapp.com/api/v1/products?page=1&rows=8&sortBy=id&orderBy=ASC');
-  const data = await res.json();
-  const products:Product[] = data.products;
+  const products = await api.getProducts()
 
   if(!products){
 
