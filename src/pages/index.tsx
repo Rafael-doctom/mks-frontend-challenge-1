@@ -1,4 +1,4 @@
-import { InferGetStaticPropsType } from 'next'
+import { InferGetStaticPropsType, NextPage } from 'next'
 import Head from 'next/head'
 
 // components
@@ -9,8 +9,14 @@ import Modal from '../components/Modal'
 
 // utilities
 import api from '../server/api'
+import Product from '../types/Product'
 
-const Home = ({ products }: InferGetStaticPropsType<typeof getStaticProps>) => {
+type HomeProps = {
+
+  products: Product[]
+}
+
+const Home:NextPage<HomeProps> = ({ products }) => {
   return (
     <div>
       <Head>
