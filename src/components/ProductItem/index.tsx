@@ -28,7 +28,7 @@ export default ({ product }:ProductItemProps) => {
 
     return(
 
-        <ProductItemContainer>
+        <ProductItemContainer data-testid={`product-${product.id}`}>
             <ProductContent>
                 <ProductImage url={product.photo} />
                     
