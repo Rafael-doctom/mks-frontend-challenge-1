@@ -1,5 +1,8 @@
 import { useSelector, useDispatch } from 'react-redux'
 
+// components
+import ModalItem from '../ModalItem'
+
 // styles
 import { 
     ModalContainer, 
@@ -14,18 +17,12 @@ import {
 } from './styles'
 
 // utilities
-import ModalItem from '../ModalItem'
 import type { RootState } from '../../store'
 import { toggleModal, selectIsVisible, selectProducts } from '../../slices/modalSlice'
 import { useAppSelector, useAppDispatch } from '../../hooks/reduxHooks'
 import { selectProductsTotalPrice } from '../../store/reducers/modalSelectors'
 
 export default () => {
-
-    // const { isVisible, products } = useSelector((state:RootState) => state.modal)
-    // const dispatch = useDispatch()
-    // const totalPrice = useAppSelector(selectProductsTotalPrice)
-
 
     const totalPrice = useAppSelector(selectProductsTotalPrice)
     const isVisible = useAppSelector(selectIsVisible)
