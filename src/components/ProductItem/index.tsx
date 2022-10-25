@@ -1,5 +1,4 @@
 import { FiShoppingBag } from 'react-icons/fi'
-import { useDispatch } from 'react-redux'
 
 // styles
 import { 
@@ -25,7 +24,6 @@ type ProductItemProps = {
 
 export default ({ product }:ProductItemProps) => {
 
-    // const dispatch = useDispatch()
     const dispatch = useAppDispatch()
 
     return(
