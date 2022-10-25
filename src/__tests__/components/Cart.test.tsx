@@ -1,5 +1,3 @@
-import userEvent  from '@testing-library/user-event'
-
 // utilities
 import Cart from '../../components/Cart'
 import { renderWithRedux } from '../../helpers/testHelpers'
