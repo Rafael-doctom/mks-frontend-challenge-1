@@ -1,5 +1,3 @@
-import { useDispatch } from 'react-redux'
-
 // styles
 import { 
     ModalItemContainer,
