@@ -6,15 +6,14 @@ import { Cart } from './styles'
 
 // utilities
 import { toggleModal } from '../../slices/modalSlice'
-import { RootState } from '../../store'
-import { useAppSelector } from '../../hooks/reduxHooks'
+import { useAppSelector, useAppDispatch } from '../../hooks/reduxHooks'
 import { selectProductsCount } from '../../store/reducers/modalSelectors'
 
 export default () => {
 
-    const dispatch = useDispatch()
     const totalItems = useAppSelector(selectProductsCount)
-   
+    const dispatch = useAppDispatch()
+    
     return (
 
         <Cart
