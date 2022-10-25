@@ -7,24 +7,21 @@ import { Cart } from './styles'
 // utilities
 import { toggleModal } from '../../slices/modalSlice'
 import { RootState } from '../../store'
+import { useAppSelector } from '../../hooks/reduxHooks'
+import { selectProductsCount } from '../../store/reducers/modalSelectors'
 
 export default () => {
 
-    const { products } = useSelector((state:RootState) => state.modal)
     const dispatch = useDispatch()
-    const totalItems = products.reduce((total, { quantity }) => {
-
-        return total + quantity
-    },0)
+    const totalItems = useAppSelector(selectProductsCount)
    
-
     return (
 
         <Cart
             onClick={() => dispatch(toggleModal())}
         >
             <IoCart />
-            {totalItems}
+            <p>{totalItems}</p>
         </Cart>
     )
 }

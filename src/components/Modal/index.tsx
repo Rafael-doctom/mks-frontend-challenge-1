@@ -17,15 +17,14 @@ import {
 import ModalItem from '../ModalItem'
 import type { RootState } from '../../store'
 import { toggleModal } from '../../slices/modalSlice'
+import { useAppSelector } from '../../hooks/reduxHooks'
+import { selectProductsTotalPrice } from '../../store/reducers/modalSelectors'
 
 export default () => {
 
     const { isVisible, products } = useSelector((state:RootState) => state.modal)
     const dispatch = useDispatch()
-    const totalPrice = products.reduce((total, { price, quantity }) => {
-
-        return total + parseInt(price.toString()) * quantity
-    },0)
+    const totalPrice = useAppSelector(selectProductsTotalPrice)
 
 
     return (
