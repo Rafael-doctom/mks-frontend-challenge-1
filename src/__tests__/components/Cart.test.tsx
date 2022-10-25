@@ -1,5 +1,7 @@
-// utilities
+// components
 import Cart from '../../components/Cart'
+
+// utilities
 import { renderWithRedux } from '../../helpers/testHelpers'
 import ModalItem from '../../types/ModalItem'
 

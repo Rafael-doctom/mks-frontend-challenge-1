@@ -1,6 +1,7 @@
-// utilities
+// components
 import Modal from '../../components/Modal'
 
+// utilities
 import { renderWithRedux } from '../../helpers/testHelpers'
 import ModalItem from '../../types/ModalItem'
 

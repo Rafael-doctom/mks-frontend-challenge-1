@@ -1,6 +1,6 @@
 import { render } from '@testing-library/react'
 
-// utilities
+// components
 import Logo from '../../components/Logo'
 
 describe('Logo component', () => {
