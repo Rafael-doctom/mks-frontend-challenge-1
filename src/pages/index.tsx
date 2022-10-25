@@ -2,14 +2,18 @@ import { InferGetStaticPropsType, NextPage } from 'next'
 import Head from 'next/head'
 
 // components
-import Header from '../components/Header'
+import Logo from '../components/Logo'
 import Products from '../components/Products'
 import Footer from '../components/Footer'
 import Modal from '../components/Modal'
 
+// styles
+import { Header } from '../styles/index'
+
 // utilities
 import api from '../server/api'
 import Product from '../types/Product'
+import Cart from '../components/Cart'
 
 type HomeProps = {
 
@@ -25,7 +29,10 @@ const Home:NextPage<HomeProps> = ({ products }) => {
         <meta name="description" content="Desafio frontend proposto pela empresa MKS Desenvolvimento de Sistemas" />
         <link rel="icon" href="/favicon.ico" />        
       </Head>
-      <Header />
+      <Header>
+        <Logo />
+        <Cart />
+      </Header>
       <Products products={products}/>
       <Footer />
       <Modal />
