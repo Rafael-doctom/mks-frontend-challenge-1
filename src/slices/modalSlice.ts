@@ -1,14 +1,14 @@
 import { createSlice, PayloadAction } from '@reduxjs/toolkit'
 
 // utilities
-import ModalItem from '../types/ModalItem'
+import IModalItem from '../types/IModalItem'
 import Product from '../types/Product'
 import { RootState } from '../store'
 
 type InitialSate = {
 
     isVisible:boolean, 
-    products:ModalItem[]
+    products:IModalItem[]
 }
 
 const initialState:InitialSate = {

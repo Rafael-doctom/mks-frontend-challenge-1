@@ -3,13 +3,13 @@ import Cart from '../../components/Cart'
 
 // utilities
 import { renderWithRedux } from '../../helpers/testHelpers'
-import ModalItem from '../../types/ModalItem'
+import IModalItem from '../../types/IModalItem'
 
 describe('Cart component', () => {
 
     it('should show the correct cart products count', () => {
 
-        const TEST_PRODUCTS:ModalItem[] = [
+        const TEST_PRODUCTS:IModalItem[] = [
             {
                 id:1,
                 name:'Iphone 11 128 GB',

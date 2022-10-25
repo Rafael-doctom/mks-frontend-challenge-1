@@ -3,13 +3,13 @@ import Modal from '../../components/Modal'
 
 // utilities
 import { renderWithRedux } from '../../helpers/testHelpers'
-import ModalItem from '../../types/ModalItem'
+import IModalItem from '../../types/IModalItem'
 
 describe('Modal component', () => {
 
     it('should show the correct modal products', () => {
 
-        const TEST_PRODUCTS:ModalItem[] = [
+        const TEST_PRODUCTS:IModalItem[] = [
 
             {
                 id:1,
@@ -38,7 +38,7 @@ describe('Modal component', () => {
 
     it('should show the empty modal phrase if the modal is empty', () => {
 
-        const TEST_PRODUCTS:ModalItem[] = []
+        const TEST_PRODUCTS:IModalItem[] = []
 
         const { getByText, debug } = renderWithRedux(<Modal />, {
             preloadedState: {

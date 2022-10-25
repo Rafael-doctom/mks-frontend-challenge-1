@@ -13,12 +13,12 @@ import {
 
 // utilities
 import { decreaseQuantity, increaseQuantity, removeProduct } from '../../slices/modalSlice'
-import ModalItem from '../../types/ModalItem'
+import IModalItem from '../../types/IModalItem'
 import { useAppDispatch } from '../../hooks/reduxHooks'
 
 type ModalItemProps = {
 
-    product: ModalItem
+    product: IModalItem
 }
 
 export default ({product}:ModalItemProps) => {
