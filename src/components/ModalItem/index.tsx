@@ -16,6 +16,7 @@ import {
 // utilities
 import { decreaseQuantity, increaseQuantity, removeProduct } from '../../slices/modalSlice'
 import ModalItem from '../../types/ModalItem'
+import { useAppDispatch } from '../../hooks/reduxHooks'
 
 type ModalItemProps = {
 
@@ -24,7 +25,7 @@ type ModalItemProps = {
 
 export default ({product}:ModalItemProps) => {
     
-    const dispatch = useDispatch()
+    const dispatch = useAppDispatch()
 
     return (
 

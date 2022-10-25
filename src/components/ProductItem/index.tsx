@@ -16,6 +16,7 @@ import {
 // utilities
 import { addProduct } from '../../slices/modalSlice'
 import Product from '../../types/Product'
+import { useAppDispatch } from '../../hooks/reduxHooks'
 
 type ProductItemProps = {
 
@@ -24,7 +25,8 @@ type ProductItemProps = {
 
 export default ({ product }:ProductItemProps) => {
 
-    const dispatch = useDispatch()
+    // const dispatch = useDispatch()
+    const dispatch = useAppDispatch()
 
     return(
 

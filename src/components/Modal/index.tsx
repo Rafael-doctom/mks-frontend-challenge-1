@@ -16,16 +16,21 @@ import {
 // utilities
 import ModalItem from '../ModalItem'
 import type { RootState } from '../../store'
-import { toggleModal } from '../../slices/modalSlice'
-import { useAppSelector } from '../../hooks/reduxHooks'
+import { toggleModal, selectIsVisible, selectProducts } from '../../slices/modalSlice'
+import { useAppSelector, useAppDispatch } from '../../hooks/reduxHooks'
 import { selectProductsTotalPrice } from '../../store/reducers/modalSelectors'
 
 export default () => {
 
-    const { isVisible, products } = useSelector((state:RootState) => state.modal)
-    const dispatch = useDispatch()
-    const totalPrice = useAppSelector(selectProductsTotalPrice)
+    // const { isVisible, products } = useSelector((state:RootState) => state.modal)
+    // const dispatch = useDispatch()
+    // const totalPrice = useAppSelector(selectProductsTotalPrice)
 
+
+    const totalPrice = useAppSelector(selectProductsTotalPrice)
+    const isVisible = useAppSelector(selectIsVisible)
+    const products = useAppSelector(selectProducts)
+    const dispatch = useAppDispatch()
 
     return (
         
