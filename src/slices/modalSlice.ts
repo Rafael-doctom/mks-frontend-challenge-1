@@ -3,12 +3,12 @@ import { createSlice, PayloadAction } from '@reduxjs/toolkit'
 // utilities
 import ModalItem from '../types/ModalItem'
 import Product from '../types/Product'
+import { RootState } from '../store'
 
 type InitialSate = {
 
     isVisible:boolean, 
     products:ModalItem[]
-
 }
 
 const initialState:InitialSate = {
@@ -100,4 +100,6 @@ export const {
 
 } = modalSlice.actions
 
+export const selectIsVisible = (state: RootState) => state.modal.isVisible
+export const selectProducts = (state: RootState) => state.modal.products
 export default modalSlice.reducer
