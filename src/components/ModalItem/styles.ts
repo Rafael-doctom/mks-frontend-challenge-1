@@ -24,22 +24,23 @@ export const ModalItemContainer = styled.div`
 
 export const RemoveItemButton = styled.button`
 
-    background-color:#000;
-    text-align:center;
+    background-color:${Colors.background.black};
+   
+    
     color:${Colors.text.white};
     height:20px;
     width:20px;
     border-radius:50%;
     font-weight:400;
     position:absolute;
-    right:-2.85%;
+    right:-2.55%;
     bottom:85%;
 
     /* desktop */
     @media (max-width:1250px) {
 
         background-color:transparent;
-        color:#000;
+        color:${Colors.text.black};
         right:5%;
         bottom:90%;
         font-size:30px;
