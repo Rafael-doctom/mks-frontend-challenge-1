@@ -32,7 +32,7 @@ export const RemoveItemButton = styled.button`
     border-radius:50%;
     font-weight:400;
     position:absolute;
-    right:-1.5%;
+    right:-2.85%;
     bottom:85%;
 
     /* desktop */
@@ -48,7 +48,7 @@ export const RemoveItemButton = styled.button`
 
 export const ItemImage = styled.div<{url:string}>`
 
-    width:40px;
+    width:45px;
     height:57px;
     display:flex;
     justify-content:center;
