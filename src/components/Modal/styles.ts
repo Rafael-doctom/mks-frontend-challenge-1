@@ -109,6 +109,16 @@ export const ModalContent = styled.div`
     overflow-y:auto;
     padding:0 47px;
 
+    &::-webkit-scrollbar {
+        width: 10px;
+        height: 10px;
+    }
+
+    &::-webkit-scrollbar-thumb {
+
+        background-color: rgba(0, 0, 0);
+    }
+
     /* mobile */
     @media (max-width:570px) {
 
