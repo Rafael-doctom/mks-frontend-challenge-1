@@ -81,10 +81,6 @@ const modalSlice = createSlice({
             )
             .filter(product => product.quantity > 0)
 
-        },
-        clearModal: (state) => {
-
-            state.products = []
         }
     }
 })
@@ -96,8 +92,7 @@ export const {
     removeProduct, 
     increaseQuantity, 
     decreaseQuantity, 
-    clearModal
-
+    
 } = modalSlice.actions
 
 export const selectIsVisible = (state: RootState) => state.isVisible
