@@ -1,5 +1,3 @@
-import { useSelector, useDispatch } from 'react-redux'
-
 // components
 import ModalItem from '../ModalItem'
 
@@ -28,11 +26,16 @@ export default () => {
     const products = useAppSelector(selectProducts)
     const dispatch = useAppDispatch()
 
+    const handleModalCloseButtonCick = () => {
+
+        dispatch(toggleModal())
+    }
+
     return (
         
         <ModalContainer isVisible={isVisible}>
             <ModalCloseButton 
-                onClick={() => dispatch(toggleModal())}
+                onClick={handleModalCloseButtonCick}
             >
                 X
             </ModalCloseButton>
@@ -73,6 +76,5 @@ export default () => {
                 </>
             }
         </ModalContainer>
-
     )
 }
