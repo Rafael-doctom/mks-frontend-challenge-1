@@ -54,7 +54,7 @@ export const ProductTitle = styled.p`
     flex:1;
     font-weight:400;
     font-size:16px;
-    color:#373737;
+    color:${Colors.text.nightRider};
 `
 
 export const ProductPriceTag = styled.span`
