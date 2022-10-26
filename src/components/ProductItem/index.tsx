@@ -28,6 +28,11 @@ export default ({ product }:ProductItemProps) => {
     const dispatch = useAppDispatch()
     const price = formatPrice(product.price)
 
+    const handleBuyButtonClick = () => {
+
+        dispatch(addProduct(product))
+    }
+
     return(
 
         <ProductItemContainer data-testid={`product-${product.id}`}>
@@ -48,7 +53,7 @@ export default ({ product }:ProductItemProps) => {
                 </ProductDescription>
                 
                 <BuyButton
-                    onClick={() => dispatch(addProduct(product))}
+                    onClick={handleBuyButtonClick}
                 >
                     <FiShoppingBag />
                     COMPRAR
