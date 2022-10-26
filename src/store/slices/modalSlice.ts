@@ -1,9 +1,9 @@
 import { createSlice, PayloadAction } from '@reduxjs/toolkit'
 
 // utilities
-import IModalItem from '../types/IModalItem'
-import Product from '../types/Product'
-import { RootState } from '../store'
+import IModalItem from '../../types/IModalItem'
+import Product from '../../types/Product'
+import { RootState } from '..'
 
 type InitialSate = {
 

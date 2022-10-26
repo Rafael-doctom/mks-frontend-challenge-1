@@ -5,7 +5,7 @@ import { useDispatch, useSelector } from 'react-redux'
 import { Cart } from './styles'
 
 // utilities
-import { toggleModal } from '../../slices/modalSlice'
+import { toggleModal } from '../../store/slices/modalSlice'
 import { useAppSelector, useAppDispatch } from '../../hooks/reduxHooks'
 import { selectProductsCount } from '../../store/reducers/modalSelectors'
 

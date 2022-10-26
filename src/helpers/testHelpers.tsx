@@ -4,7 +4,7 @@ import React from 'react'
 import { Provider } from 'react-redux'
 
 // utilities
-import ModalReducer from '../slices/modalSlice'
+import ModalReducer from '../store/slices/modalSlice'
 import { RootState } from '../store/index'
 
 export const renderWithRedux = (

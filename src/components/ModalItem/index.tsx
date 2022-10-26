@@ -12,7 +12,7 @@ import {
 } from './styles'
 
 // utilities
-import { decreaseQuantity, increaseQuantity, removeProduct } from '../../slices/modalSlice'
+import { decreaseQuantity, increaseQuantity, removeProduct } from '../../store/slices/modalSlice'
 import IModalItem from '../../types/IModalItem'
 import { useAppDispatch } from '../../hooks/reduxHooks'
 import formatPrice from '../../helpers/formatPrice'

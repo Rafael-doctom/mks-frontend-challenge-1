@@ -13,7 +13,7 @@ import {
 } from './styles'
 
 // utilities
-import { addProduct } from '../../slices/modalSlice'
+import { addProduct } from '../../store/slices/modalSlice'
 import Product from '../../types/Product'
 import { useAppDispatch } from '../../hooks/reduxHooks'
 import formatPrice from '../../helpers/formatPrice'

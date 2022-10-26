@@ -18,7 +18,7 @@ import {
 
 // utilities
 import type { RootState } from '../../store'
-import { toggleModal, selectIsVisible, selectProducts } from '../../slices/modalSlice'
+import { toggleModal, selectIsVisible, selectProducts } from '../../store/slices/modalSlice'
 import { useAppSelector, useAppDispatch } from '../../hooks/reduxHooks'
 import { selectProductsTotalPrice } from '../../store/reducers/modalSelectors'
 

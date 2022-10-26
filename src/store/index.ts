@@ -1,7 +1,7 @@
 import { configureStore } from '@reduxjs/toolkit'
 
 // utilities
-import ModalReducer from '../slices/modalSlice'
+import ModalReducer from './slices/modalSlice'
 
 export const store = configureStore({
 
@@ -12,4 +12,3 @@ export const store = configureStore({
 
 export type RootState = ReturnType<typeof store.getState>
 export type AppDispatch = typeof store.dispatch
-
