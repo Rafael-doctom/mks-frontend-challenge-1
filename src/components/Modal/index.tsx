@@ -17,7 +17,6 @@ import {
 } from './styles'
 
 // utilities
-import type { RootState } from '../../store'
 import { toggleModal, selectIsVisible, selectProducts } from '../../store/slices/modalSlice'
 import { useAppSelector, useAppDispatch } from '../../hooks/reduxHooks'
 import { selectProductsTotalPrice } from '../../store/reducers/modalSelectors'
@@ -55,7 +54,7 @@ export default () => {
                     </ModalHeader>
 
                     <ModalContent>
-                        {products.map(product => (
+                        {products.map((product) => (
 
                             <ModalItem key={product.id} product={product}/>   
                         ))}
