@@ -1,4 +1,4 @@
-import { InferGetStaticPropsType, NextPage } from 'next'
+import { NextPage } from 'next'
 import Head from 'next/head'
 
 // components
@@ -41,7 +41,6 @@ const Home:NextPage<HomeProps> = ({ products }) => {
 }
 
 export default Home
-
 
 export const getStaticProps = async () => {
 
