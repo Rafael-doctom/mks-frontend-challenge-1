@@ -25,9 +25,7 @@ describe('Modal component', () => {
 
         const { getByText } = renderWithRedux(<Modal />, {
             preloadedState: {
-              modal: {
-                products:TEST_PRODUCTS
-              }
+              products:TEST_PRODUCTS
             } as any
         })
         
@@ -44,9 +42,7 @@ describe('Modal component', () => {
 
         const { getByText, debug } = renderWithRedux(<Modal />, {
             preloadedState: {
-              modal: {
-                products:TEST_PRODUCTS
-              }
+              products:TEST_PRODUCTS
             } as any
         })
         
@@ -70,10 +66,7 @@ describe('Modal component', () => {
             {
                 preloadedState: {
 
-                    modal: {
-
-                        products: TEST_PRODUCTS
-                    }
+                    products: TEST_PRODUCTS
                 } as any
             }
         )
@@ -101,10 +94,7 @@ describe('Modal component', () => {
             {
                 preloadedState: {
 
-                    modal: {
-
-                        products: TEST_PRODUCTS
-                    }
+                   products: TEST_PRODUCTS
                 } as any
             }
         )
@@ -131,10 +121,7 @@ describe('Modal component', () => {
             {
                 preloadedState: {
 
-                    modal: {
-
-                        products: TEST_PRODUCTS
-                    }
+                    products: TEST_PRODUCTS
                 } as any
             }
         )

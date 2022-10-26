@@ -2,7 +2,7 @@ import { RootState } from '../index'
 
 export const selectProductsTotalPrice = (state:RootState) => {
 
-    return state.modal.products.reduce((acc, currentProduct) => {
+    return state.products.reduce((acc, currentProduct) => {
 
         return acc + currentProduct.price * currentProduct.quantity
     },0)
@@ -10,7 +10,7 @@ export const selectProductsTotalPrice = (state:RootState) => {
 
 export const selectProductsCount = (state:RootState) => {
 
-    return state.modal.products.reduce((acc, currentProduct) => {
+    return state.products.reduce((acc, currentProduct) => {
 
         return acc + currentProduct.quantity
     },0)

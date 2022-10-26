@@ -31,9 +31,7 @@ describe('Cart component', () => {
 
         const { getByText } = renderWithRedux(<Cart />, {
             preloadedState: {
-              modal: {
-                products:TEST_PRODUCTS
-              }
+              products:TEST_PRODUCTS
             } as any
         })
         

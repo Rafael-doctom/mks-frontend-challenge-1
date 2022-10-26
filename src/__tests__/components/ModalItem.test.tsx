@@ -21,9 +21,7 @@ describe('ModalItem component', () => {
 
         const { getByText, getByLabelText } = renderWithRedux(<ModalItem product={TEST_PRODUCT} />,
            
-            {
-                preloadedState: {} as any
-            }
+            {} as any
         )
 
         getByText(/air pods/i)

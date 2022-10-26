@@ -100,6 +100,6 @@ export const {
 
 } = modalSlice.actions
 
-export const selectIsVisible = (state: RootState) => state.modal.isVisible
-export const selectProducts = (state: RootState) => state.modal.products
+export const selectIsVisible = (state: RootState) => state.isVisible
+export const selectProducts = (state: RootState) => state.products
 export default modalSlice.reducer

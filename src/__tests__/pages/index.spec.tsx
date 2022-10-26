@@ -55,10 +55,7 @@ describe('The home page', () => {
         ]
 
         const { getByTestId, debug } = renderWithRedux(<Home products={TEST_PRODUCTS} />,
-           
-            {
-                preloadedState: {} as any
-            }
+            {} as any
         )
 
         TEST_PRODUCTS.forEach(product => {

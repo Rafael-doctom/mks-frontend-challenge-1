@@ -28,9 +28,7 @@ describe('Product component', () => {
 
         const { getByTestId, debug } = renderWithRedux(<Products products={TEST_PRODUCTS} />,
            
-            {
-                preloadedState: {} as any
-            }
+            {} as any
         )
 
         TEST_PRODUCTS.forEach(product => {

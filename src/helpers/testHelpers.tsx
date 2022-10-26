@@ -12,9 +12,8 @@ export const renderWithRedux = (
   {
     preloadedState,
     store = configureStore({
-      reducer: {
-        modal:ModalReducer
-      },
+      
+      reducer: ModalReducer,
       preloadedState
     }),
     ...renderOptions

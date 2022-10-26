@@ -20,9 +20,7 @@ describe('Product component', () => {
 
         const { getByText, debug } = renderWithRedux(<ProductItem product={TEST_PRODUCT} />,
            
-            {
-                preloadedState: {} as any
-            }
+            {} as any
         )
 
         getByText(/air pods/i)
