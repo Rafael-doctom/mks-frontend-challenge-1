@@ -1,5 +1,4 @@
 import { IoCart } from 'react-icons/io5'
-import { useDispatch, useSelector } from 'react-redux'
 
 // styles
 import { Cart } from './styles'
@@ -14,10 +13,15 @@ export default () => {
     const totalItems = useAppSelector(selectProductsCount)
     const dispatch = useAppDispatch()
     
+    const handleCartClick = () => {
+
+        dispatch(toggleModal())
+    }
+    
     return (
 
         <Cart
-            onClick={() => dispatch(toggleModal())}
+            onClick={handleCartClick}
         >
             <IoCart />
             <p>{totalItems}</p>
