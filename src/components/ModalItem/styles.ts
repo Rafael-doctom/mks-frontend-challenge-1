@@ -79,6 +79,7 @@ export const ItemTitle = styled.p`
     @media (max-width:1250px) {
 
         margin-bottom:10px;
+        max-width:200px;
     }
 `
 
