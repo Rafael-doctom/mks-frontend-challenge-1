@@ -40,7 +40,7 @@ export const RemoveItemButton = styled.button`
     /* desktop */
     @media (max-width:1250px) {
 
-        background-color:transparent;
+        /* background-color:transparent; */
         color:${Colors.text.black};
         right:5%;
         bottom:90%;
