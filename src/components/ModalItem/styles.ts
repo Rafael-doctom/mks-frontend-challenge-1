@@ -35,6 +35,7 @@ export const RemoveItemButton = styled.button`
     position:absolute;
     right:-2.55%;
     bottom:85%;
+    z-index:200;
 
     /* desktop */
     @media (max-width:1250px) {
