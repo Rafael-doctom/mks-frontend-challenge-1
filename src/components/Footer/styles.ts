@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 import Colors from '../../theme/colors'
 
-export const Footer = styled.footer`
+export const FooterContainer = styled.footer`
 
     height:34px;
     position:sticky;

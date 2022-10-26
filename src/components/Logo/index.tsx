@@ -1,13 +1,16 @@
 // styles
-import { Logo } from './styles'
+import { LogoContainer } from './styles'
 
-export default () => {
+const Logo = () => {
 
     return (
-        <Logo>
+        <LogoContainer>
             <p>MKS</p>
             <span>Sistemas</span>
-        </Logo>
+        </LogoContainer>
         
     )
 }
+
+Logo.displayName = 'Logo'
+export default Logo

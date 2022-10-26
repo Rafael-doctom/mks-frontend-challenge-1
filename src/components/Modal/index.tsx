@@ -19,7 +19,7 @@ import { toggleModal, selectIsVisible, selectProducts } from '../../store/slices
 import { useAppSelector, useAppDispatch } from '../../hooks/reduxHooks'
 import { selectProductsTotalPrice } from '../../store/reducers/modalSelectors'
 
-export default () => {
+const Modal =  () => {
 
     const totalPrice = useAppSelector(selectProductsTotalPrice)
     const isVisible = useAppSelector(selectIsVisible)
@@ -78,3 +78,6 @@ export default () => {
         </ModalContainer>
     )
 }
+
+Modal.displayName = 'Modal'
+export default Modal

@@ -22,7 +22,7 @@ type ModalItemProps = {
     product: IModalItem
 }
 
-export default ({product}:ModalItemProps) => {
+const ModalItem = ({product}:ModalItemProps) => {
     
     const dispatch = useAppDispatch()
     const price = formatPrice(product.price)
@@ -90,3 +90,6 @@ export default ({product}:ModalItemProps) => {
         </ModalItemContainer>
     )
 }
+
+ModalItem.displayName = 'ModalItem'
+export default ModalItem

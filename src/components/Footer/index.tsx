@@ -1,11 +1,14 @@
 // styles
-import { Footer } from './styles'
+import { FooterContainer } from './styles'
 
-export default () => {
+const Footer = () => {
 
     return (
-        <Footer>
+        <FooterContainer>
             MKS sistemas © Todos os direitos reservados
-        </Footer>
+        </FooterContainer>
     )
 }
+
+Footer.displayName = 'Footer'
+export default Footer

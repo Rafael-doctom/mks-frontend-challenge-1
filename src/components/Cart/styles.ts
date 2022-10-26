@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 import Colors from '../../theme/colors'
 
-export const Cart = styled.button`
+export const CartContainer = styled.button`
     border-radius:8px;
     background-color:${Colors.background.white};
     width:90px;

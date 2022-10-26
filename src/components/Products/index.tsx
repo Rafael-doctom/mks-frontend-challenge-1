@@ -12,7 +12,7 @@ type ProductsProps = {
      products:Product[]
 }
 
-export default ({ products }:ProductsProps) => {
+const Products = ({ products }:ProductsProps) => {
 
      return(
 
@@ -25,4 +25,7 @@ export default ({ products }:ProductsProps) => {
           </ProductsContainer>
      )
 }
+
+Products.displayName = 'Products'
+export default Products
 

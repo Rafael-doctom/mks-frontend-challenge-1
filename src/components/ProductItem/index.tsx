@@ -23,7 +23,7 @@ type ProductItemProps = {
     product:Product
 }
 
-export default ({ product }:ProductItemProps) => {
+const ProductItem = ({ product }:ProductItemProps) => {
 
     const dispatch = useAppDispatch()
     const price = formatPrice(product.price)
@@ -60,7 +60,8 @@ export default ({ product }:ProductItemProps) => {
                 </BuyButton>
             </ProductContent>
         </ProductItemContainer>
-
-
     )
 }
+
+ProductItem.displayName = 'ProductItem'
+export default ProductItem
