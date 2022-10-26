@@ -27,11 +27,26 @@ export default ({product}:ModalItemProps) => {
     const dispatch = useAppDispatch()
     const price = formatPrice(product.price)
 
+    const handleRemoveItemButtonClick = () => {
+
+        dispatch(removeProduct(product.id))
+    }
+
+    const handleDecreaseQuantityClick = () => {
+
+        dispatch(decreaseQuantity(product.id))
+    }
+
+    const handleIncreaseQuantityClick = () => {
+
+        dispatch(increaseQuantity(product.id))
+    }
+
     return (
 
         <ModalItemContainer>
             <RemoveItemButton
-                onClick={() => dispatch(removeProduct(product.id))}
+                onClick={handleRemoveItemButtonClick}
                 aria-label={`Remove ${product.name}`}
             >
                 x
@@ -49,7 +64,7 @@ export default ({product}:ModalItemProps) => {
 
                     <ItemQuantity>
                         <QuantityButton
-                            onClick={() => dispatch(decreaseQuantity(product.id))}
+                            onClick={handleDecreaseQuantityClick}
                             aria-label={`Decrease quantity of ${product.name}`}
                         >
                             -
@@ -59,7 +74,7 @@ export default ({product}:ModalItemProps) => {
                             {product.quantity}
                         </Quantity>
                         <QuantityButton
-                            onClick={() => dispatch(increaseQuantity(product.id))}
+                            onClick={handleIncreaseQuantityClick}
                             aria-label={`Increase quantity of ${product.name}`}
                         >
                             +
