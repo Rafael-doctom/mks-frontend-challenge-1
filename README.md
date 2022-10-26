@@ -1,5 +1,7 @@
 ## Sobre o projeto
 Aplicação feita em um desafio técnico no processo seletivo da MKS Desenvolvimento de Sistemas onde a tarefa era desenvolver um projeto de e-comerce consumindo a [API Rest de produtos](https://mks-frontend-challenge-api.herokuapp.com/api-docs/) disponibilizada pela empresa.
+<br />
+Link do deploy: [https://mks-frontend-challenge-kappa.vercel.app/](https://mks-frontend-challenge-kappa.vercel.app/)
 <div align="center"> 
     Desktop
   <img src="./public/screenshots/desktop1.png" alt="screenshot" />
