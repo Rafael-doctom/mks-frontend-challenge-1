@@ -7,7 +7,7 @@ import Product from '../../types/Product'
 
 describe('Product component', () => {
 
-    it('The product component renders products correctly', () => {
+    it('should render the products correctly', () => {
 
         const TEST_PRODUCTS:Product[] = [
             {
