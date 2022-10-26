@@ -16,6 +16,7 @@ import {
 import { addProduct } from '../../slices/modalSlice'
 import Product from '../../types/Product'
 import { useAppDispatch } from '../../hooks/reduxHooks'
+import formatPrice from '../../helpers/formatPrice'
 
 type ProductItemProps = {
 
@@ -25,6 +26,7 @@ type ProductItemProps = {
 export default ({ product }:ProductItemProps) => {
 
     const dispatch = useAppDispatch()
+    const price = formatPrice(product.price)
 
     return(
 
@@ -37,7 +39,7 @@ export default ({ product }:ProductItemProps) => {
                         {product.name}
                     </ProductTitle>
                     <ProductPriceTag>
-                        R${parseInt(product.price.toString())}
+                        R${price}
                     </ProductPriceTag>
                 </ProductHeader>
 

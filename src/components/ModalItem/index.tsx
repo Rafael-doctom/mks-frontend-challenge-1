@@ -15,6 +15,7 @@ import {
 import { decreaseQuantity, increaseQuantity, removeProduct } from '../../slices/modalSlice'
 import IModalItem from '../../types/IModalItem'
 import { useAppDispatch } from '../../hooks/reduxHooks'
+import formatPrice from '../../helpers/formatPrice'
 
 type ModalItemProps = {
 
@@ -24,6 +25,7 @@ type ModalItemProps = {
 export default ({product}:ModalItemProps) => {
     
     const dispatch = useAppDispatch()
+    const price = formatPrice(product.price)
 
     return (
 
@@ -66,7 +68,7 @@ export default ({product}:ModalItemProps) => {
                 </ItemQuantityContainer>
 
                 <ItemPrice>
-                    R${parseInt(product.price.toString())}
+                    R${price}
                 </ItemPrice>
            </div>
 
