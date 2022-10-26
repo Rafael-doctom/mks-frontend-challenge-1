@@ -34,35 +34,4 @@ describe('The home page', () => {
             revalidate:10
         })
     })
-
-    it('Home page renders products correctly', () => {
-
-        const TEST_PRODUCTS:Product[] = [
-            {
-                id:1,
-                name:'Iphone 11 128 GB',
-                description:'Lorem ipsum', 
-                photo:'https://mks-sistemas.nyc3.digitaloceanspaces.com/products/iphone11x128.webp',
-                price:5000.00
-            },
-            {
-                id:2,
-                name:'Air Pods',
-                description:'Lorem ipsum 2', 
-                photo:'https://mks-sistemas.nyc3.digitaloceanspaces.com/products/airpods.webp',
-                price:1200.00
-            }
-        ]
-
-        const { getByTestId, debug } = renderWithRedux(<Home products={TEST_PRODUCTS} />,
-            {} as any
-        )
-
-        TEST_PRODUCTS.forEach(product => {
-
-            const productItem = getByTestId(`product-${product.id}`)
-
-            expect(productItem.textContent).toContain(product.name)
-        })
-    })
 })
