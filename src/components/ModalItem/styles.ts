@@ -160,6 +160,7 @@ export const QuantityButton = styled.button`
     background:none;
     font-weight:400;
     font-size:12px;
+    color:${Colors.text.black};
 
     /* mobile */
     @media (max-width:570px) {
