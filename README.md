@@ -1,34 +1,129 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+## Sobre o projeto
+Aplicação feita em um desafio técnico no processo seletivo da MKS Desenvolvimento de Sistemas onde a tarefa era desenvolver um projeto de e-comerce consumindo a [API Rest de produtos](https://mks-frontend-challenge-api.herokuapp.com/api-docs/) disponibilizada pela empresa.
+<div align="center"> 
+    Desktop
+  <img src="./public/screenshots/desktop1.png" alt="screenshot" />
+</div>
+<div align="center"> 
+    <p>Mobile</p>
+  <img src="./public/screenshots/mobile1.png" alt="screenshot" />
+</div>
+<br/>
 
-## Getting Started
+### Stacks
+<details>
+  <summary>Client</summary>
+  <ul>
+    <li><a href="https://nextjs.org/">Next.js</a></li>
+    <li><a href="https://www.typescriptlang.org/">Typescript</a></li>
+    <li><a href="https://styled-components.com/">Styled Components</a></li>
+    <li><a href="https://redux-toolkit.js.org/">Redux Toolkit</a></li>
+     <li><a href="https://jestjs.io/pt-BR/">Jest</a></li>
+  </ul>
+</details>
 
-First, run the development server:
+### Funcionalidades
+
+- Adicionar produtos ao carrinho;
+- Aumentar ou diminuir a quantidade dos produtos selecionados;
+- Remover itens do carrinho;
+
+## Começando
+
+### Pré-requisitos
+
+Antes de começar, você precisará ter instalado em sua máquina as seguintes ferramentas: [Git](https://git-scm.com/), [Node.js](https://nodejs.org/en/) e [Typescript](https://www.typescriptlang.org/).
+   
+### Rodar testes
+
+Para rodar testes, escreva o seguinte comando
 
 ```bash
-npm run dev
-# or
-yarn dev
+  npm run test
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### Rodar localmanente
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
+Clone o projeto
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
+```bash
+  git clone https://github.com/zirtaebn/mks-frontend-challenge.git
+```
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+Vá para o diretório do projeto
 
-## Learn More
+```bash
+  cd mks-frontend-challenge
+```
 
-To learn more about Next.js, take a look at the following resources:
+Instale as dependências
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+```bash
+  npm install
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+Inicie o servidor em modo de desenvolvimento
 
-## Deploy on Vercel
+```bash
+  npm run dev
+```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Uso
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+### Adicione um produto ao carrinho clicando em "COMPRAR"
+<div align="center">
+    Desktop
+    <img src="./public/screenshots/desktop2.png" alt="screenshot" />
+</div>
+
+<div  align="center">
+    <p>Mobile</p>
+    <img src="./public/screenshots/mobile2.png" alt="screenshot" />
+</div>
+
+
+Clique no carrinho para ver o produto selecionado e aumente ou diminua a quantidade do mesmo
+<div  align="center">
+    Desktop
+    <img src="./public/screenshots/desktop3.png" alt="screenshot" />
+</div>
+<div  align="center">
+    <p>Mobile</p>
+    <img src="./public/screenshots/mobile3.png" alt="screenshot" />
+</div>
+
+
+Aperte no x para remover o produto do carrinho
+<div  align="center">
+    Desktop
+    <img src="./public/screenshots/desktop4.png" alt="screenshot" />
+</div>
+<div  align="center">
+    <p>Mobile</p>
+    <img src="./public/screenshots/mobile4.png" alt="screenshot" />
+</div>
+
+
+
+## Contribuição
+
+<a href="https://github.com/zirtaebn/weather-app--test/graphs/contributors">
+  <img src="https://avatars.githubusercontent.com/u/80608809?s=60&v=4" />
+</a>
+</br>
+Contribuições são sempre bem vindas!
+
+## Contato
+
+Beatriz Sant'Anna - [@zirtaebn](https://twitter.com/zirtaebn) - zirtaebndev@gmail.com
+
+Link do projeto: [https://github.com/zirtaebn/mks-frontend-challenge](https://github.com/zirtaebn/mks-frontend-challenge)
+
+
+## Reconhecimentos
+
+Recursos e bibliotecas úteis que utilizei no projeto.
+ - [API Rest de produtos](https://mks-frontend-challenge-api.herokuapp.com/api-docs/)
+ - [Axios](https://axios-http.com/ptbr/)
+ - [React Testing Library](https://testing-library.com/docs/react-testing-library/intro/)
+ - [React Icons](https://react-icons.github.io/react-icons/)
