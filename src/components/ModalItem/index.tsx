@@ -30,6 +30,7 @@ export default ({product}:ModalItemProps) => {
         <ModalItemContainer>
             <RemoveItemButton
                 onClick={() => dispatch(removeProduct(product.id))}
+                aria-label={`Remove ${product.name}`}
             >
                 x
             </RemoveItemButton>
@@ -47,14 +48,17 @@ export default ({product}:ModalItemProps) => {
                     <ItemQuantity>
                         <QuantityButton
                             onClick={() => dispatch(decreaseQuantity(product.id))}
+                            aria-label={`Decrease quantity of ${product.name}`}
                         >
                             -
                         </QuantityButton>
-                        <Quantity>
+                        <Quantity
+                        >
                             {product.quantity}
                         </Quantity>
                         <QuantityButton
                             onClick={() => dispatch(increaseQuantity(product.id))}
+                            aria-label={`Increase quantity of ${product.name}`}
                         >
                             +
                         </QuantityButton>
