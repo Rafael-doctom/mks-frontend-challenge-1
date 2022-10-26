@@ -127,3 +127,5 @@ Recursos e bibliotecas úteis que utilizei no projeto.
  - [Axios](https://axios-http.com/ptbr/)
  - [React Testing Library](https://testing-library.com/docs/react-testing-library/intro/)
  - [React Icons](https://react-icons.github.io/react-icons/)
+ - [Redux Persist](https://www.npmjs.com/package/redux-persist)
+ - [Redux Thunk](https://www.npmjs.com/package/redux-thunk)
