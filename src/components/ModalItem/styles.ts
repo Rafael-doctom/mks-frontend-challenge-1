@@ -41,11 +41,11 @@ export const RemoveItemButton = styled.button`
     @media (max-width:1250px) {
 
         background-color:transparent;
-        height:30px;
-        width:30px;
         color:${Colors.text.black};
+        width:40px;
+        height:40px;
         right:1%;
-        bottom:85%;
+        bottom:80%;
         font-size:30px;
     }
 `
