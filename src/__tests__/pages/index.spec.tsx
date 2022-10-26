@@ -1,11 +1,8 @@
-import { render } from '@testing-library/react'
-import { Provider } from 'react-redux'
-
 // utilities 
 import Home, { getStaticProps } from '../../pages'
 import api from '../../server/api'
-import { store } from '../../store'
 import Product from '../../types/Product'
+import { renderWithRedux } from '../../helpers/testHelpers'
 
 describe('The home page', () => {
 
@@ -57,11 +54,11 @@ describe('The home page', () => {
             }
         ]
 
-        const { getByTestId, debug } = render(
-
-            <Provider store={store}>
-                <Home products={TEST_PRODUCTS}/>
-            </Provider>
+        const { getByTestId, debug } = renderWithRedux(<Home products={TEST_PRODUCTS} />,
+           
+            {
+                preloadedState: {} as any
+            }
         )
 
         TEST_PRODUCTS.forEach(product => {
